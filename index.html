@@ -473,5 +473,162 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
-</body>
+<!-- ULTIMATE ENTERTAINMENT WORLD UPGRADE -->
+
+<style>
+.extra-zone {
+  padding: 45px 20px;
+  margin: 25px auto;
+  max-width: 1100px;
+  border: 1px solid #5545ff;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #10132c, #20103b);
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.extra-zone h2 {
+  color: #a99aff;
+  font-size: 28px;
+}
+.extra-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 25px;
+}
+.extra-card {
+  padding: 22px;
+  background: #171b38;
+  border: 1px solid #4945a0;
+  border-radius: 16px;
+}
+.extra-btn {
+  padding: 12px 18px;
+  margin: 8px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #7657ff, #ed49d8);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.extra-result {
+  margin-top: 18px;
+  color: #65f7dc;
+  overflow-wrap: anywhere;
+}
+</style>
+
+<section class="extra-zone" id="cartoon-zone">
+  <h2>🎬 Cartoon Universe</h2>
+  <p>Welcome to a universe of imagination, stories and fun!</p>
+  <div class="extra-grid">
+    <div class="extra-card">
+      <h3>🚀 Space Adventures</h3>
+      <p>Explore amazing worlds beyond the stars.</p>
+    </div>
+    <div class="extra-card">
+      <h3>🦸 Superhero Stories</h3>
+      <p>Discover original heroes and exciting adventures.</p>
+    </div>
+    <div class="extra-card">
+      <h3>🐼 Funny Animal Tales</h3>
+      <p>Enjoy creative stories featuring animal friends.</p>
+    </div>
+  </div>
+  <p>Original cartoon videos coming soon!</p>
+</section>
+
+<section class="extra-zone" id="gaming-zone">
+  <h2>🎮 Gaming Arena</h2>
+  <p>Ready for a quick challenge?</p>
+  <div class="extra-card">
+    <h3>🎯 Lucky Number Challenge</h3>
+    <p>Try your luck and discover a number from 1 to 100.</p>
+    <button class="extra-btn" onclick="playLuckyNumber()">
+      PLAY NOW
+    </button>
+    <div class="extra-result" id="game-result" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="extra-zone" id="ai-zone">
+  <h2>🤖 AI Creative Studio</h2>
+  <p>Get inspired and create something amazing!</p>
+  <div class="extra-grid">
+    <div class="extra-card">
+      <h3>📖 Story Idea Generator</h3>
+      <p>Get a new idea for your next story.</p>
+      <button class="extra-btn" onclick="generateStory()">
+        GENERATE IDEA
+      </button>
+      <div class="extra-result" id="story-result" aria-live="polite"></div>
+    </div>
+    <div class="extra-card">
+      <h3>🎨 Art Inspiration</h3>
+      <p>Find inspiration for your next creative project.</p>
+      <button class="extra-btn" onclick="generateArt()">
+        GET INSPIRATION
+      </button>
+      <div class="extra-result" id="art-result" aria-live="polite"></div>
+    </div>
+  </div>
+  <p>These are demo tools, not connected to a real AI service yet.</p>
+</section>
+
+<section class="extra-zone" id="earning-zone">
+  <h2>💰 Creator Zone</h2>
+  <p>Build your audience and explore future earning opportunities.</p>
+  <div class="extra-grid">
+    <div class="extra-card">
+      <h3>📺 Video Content</h3>
+      <p>Publish original, engaging videos and stories.</p>
+    </div>
+    <div class="extra-card">
+      <h3>📈 Grow Your Audience</h3>
+      <p>Improve your content and encourage visitors to return.</p>
+    </div>
+    <div class="extra-card">
+      <h3>💵 Future Monetization</h3>
+      <p>Explore advertising and other eligible monetization options.</p>
+    </div>
+  </div>
+  <p>Monetization requires eligible services and approval. Earnings are not guaranteed.</p>
+</section>
+
+<script>
+function playLuckyNumber() {
+  const number = Math.floor(Math.random() * 100) + 1;
+  document.getElementById("game-result").textContent =
+    "🌟 Your lucky number is " + number + "!";
+}
+
+function generateStory() {
+  const ideas = [
+    "A tiny robot discovers a hidden magical planet.",
+    "Three animal friends build a flying treehouse.",
+    "A young explorer finds a mysterious glowing map.",
+    "A friendly alien visits Earth to learn about friendship.",
+    "A brave little turtle enters a fantastic race."
+  ];
+
+  const idea = ideas[Math.floor(Math.random() * ideas.length)];
+  document.getElementById("story-result").textContent = idea;
+}
+
+function generateArt() {
+  const ideas = [
+    "Draw a futuristic city floating among the clouds.",
+    "Imagine a colourful underwater kingdom.",
+    "Create a friendly robot exploring a jungle.",
+    "Design a magical castle under a starry sky.",
+    "Illustrate a planet inhabited by adorable creatures."
+  ];
+
+  const idea = ideas[Math.floor(Math.random() * ideas.length)];
+  document.getElementById("art-result").textContent = idea;
+}
+</script>
+/body>
 </html>
